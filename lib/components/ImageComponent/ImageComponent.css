@@ -1,0 +1,94 @@
+.image-cont {
+    max-height: 30rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-image--loaded .main-image__image {
+    opacity: 1;
+}
+
+.main-image--loaded .main-image__placeholder {
+    opacity: 0;
+}
+
+.main-image--error .main-image__placeholder {
+    filter: none;
+    margin: 0;
+    max-height: 100%;
+    width: 100%;
+}
+
+.main-image__placeholder {
+    filter: blur(2px);
+    margin: -0.5rem;
+    max-height: 31rem;
+    transition: opacity 1s linear, filter 1s linear;
+    width: calc(100% + 1rem);
+}
+
+.main-image__image {
+    left: 0;
+    max-height: 100%;
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transition: opacity 1s linear;
+    width: 100%;
+}
+
+.image__loader {
+    background-color: dimgray;
+    bottom: 0;
+    height: 0.3rem;
+    position: absolute;
+    width: 100%;
+}
+
+.image__l__bar {
+    content: "";
+    display: inline;
+    height: 100%;
+    left: 50%;
+    text-align: center;
+    position: absolute;
+    width: 0;
+}
+
+.image__l__bar:nth-child(1) {
+    background-color: darkgray;
+    animation: loading 4s linear infinite;
+}
+
+.image__l__bar:nth-child(2) {
+    background-color: grey;
+    animation: loading 4s linear 1s infinite;
+}
+
+.image__l__bar:nth-child(3) {
+    background-color: lightgray;
+    animation: loading 4s linear 2s infinite;
+}
+
+.image__l__bar:nth-child(4) {
+    background-color: whitesmoke;
+    animation: loading 4s linear 3s infinite;
+}
+
+@keyframes loading {
+    from {
+        left: 50%;
+        width: 0;
+        z-index: 100;
+    }
+    33.3333% {
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    to {
+        left: 0;
+        width: 100%;
+    }
+}
