@@ -9,9 +9,10 @@
 ## To use this component
 
     Just install the package and import the ImageComponent and render it with your src.
+    `import { ImageComponent } from 'image-component-react'`
 
 ## Example
-   * Clone the repository `git clone https://github.com/bandana147/image-component.git`
+   * Clone the repository `git clone https://github.com/bandana147/image-component-react.git`
    * Do `npm install` and then npm start
    * It will open up in `http://localhost:3000`
 
