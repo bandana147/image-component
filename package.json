@@ -1,5 +1,5 @@
 {
-  "name": "image-component",
+  "name": "image-component-react",
   "main": "lib/index.js",
   "version": "0.1.0",
   "dependencies": {
